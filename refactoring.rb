@@ -7,7 +7,7 @@ def first_n_primes(n)
 
   # The Ruby 1.9 Prime class makes the array automatically!
   prime = Prime.instance
-  prime.first n
+  puts prime.first n
 end
 
-first_n_primes(10)
+first_n_primes(5)
