@@ -11,7 +11,7 @@ def first_n_primes(n)
     return "n must be greater than 0."
   end
   
-  prime_array = [] if prime_array.nil?
+  prime_array ||= []      #conditional assignment, if its unassigned/nil, assign it to... 
   
   prime = Prime.new
   for num in (1..n)
