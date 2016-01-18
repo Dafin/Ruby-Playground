@@ -3,16 +3,13 @@ require 'prime'
 
 def first_n_primes(n)
 
-  unless n.is_a? Integer
-    return "n must be an integer."
-  end
+ 
+  puts "n must be an integer." if !n.is_a? Integer 
+  puts "n must be greater than 0." unless n >= 0 
+  
 
-  if n <= 0
-    return "n must be greater than 0."
-  end
-  
-  prime_array ||= []      #conditional assignment, if its unassigned/nil, assign it to... 
-  
+  prime_array ||= []     
+    
   prime = Prime.new
   for num in (1..n)
     prime_array.push(prime.next)
@@ -20,4 +17,4 @@ def first_n_primes(n)
   return prime_array
 end
 
-first_n_primes(10)
+first_n_primes(-5)
