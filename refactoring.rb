@@ -11,10 +11,11 @@ def first_n_primes(n)
   prime_array ||= []     
     
   prime = Prime.new
-  for num in (1..n)
-    prime_array.push(prime.next)
-  end
-  return prime_array
+  
+  n.times {prime_array.push(prime.next)}
+
 end
 
-first_n_primes(-5)
+
+
+first_n_primes(5)
