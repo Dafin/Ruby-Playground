@@ -1,21 +1,13 @@
-$VERBOSE = nil  
-require 'prime'   
+require 'prime'
 
 def first_n_primes(n)
+  # Check for correct input!
+  "n must be an integer" unless n.is_a? Integer
+  "n must be greater than 0" if n <= 0
 
- 
-  puts "n must be an integer." if !n.is_a? Integer 
-  puts "n must be greater than 0." unless n >= 0 
-  
-
-  prime_array ||= []     
-    
-  prime = Prime.new
-  
-  n.times {prime_array << prime.next}
-
+  # The Ruby 1.9 Prime class makes the array automatically!
+  prime = Prime.instance
+  prime.first n
 end
 
-
-
-first_n_primes(5)
+first_n_primes(10)
