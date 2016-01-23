@@ -7,7 +7,7 @@ def converter(mpg)
 	km_pg = 1.609344 * mpg
 
 	km_pl = km_pg / 4.54609188
-	puts km_pl.round(2)
+	puts "..is equivalent to #{ km_pl.round(2) } Kilometers Per Litre"
 
 end
 
